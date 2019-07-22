@@ -56,18 +56,18 @@ end;
 
 
 --IF THEN IF THEN ELSE IF THEN ELSEIF
-SET SERVEROUT ON;
+SET SERVEROUTPUT ON;
 declare
-    v_place varchar2(20) := '&enter_city';
+    v_place varchar2(40) := '&enter_city';
 begin
     if v_place = 'Metropolis' THEN
         DBMS_OUTPUT.PUT_LINE('City is protected by Superman');
-    ELSEIF v_place = 'Gotham' THEN
+    ELSIF v_place = 'Gotham' THEN
         DBMS_OUTPUT.PUT_LINE('City is protected by Batman');
-    ELSEIF v_place = 'Amazon' THEN
+    ELSIF v_place = 'Amazon' THEN
         DBMS_OUTPUT.PUT_LINE('City is protected by Wonder woman');
     ELSE
-        DBMS_OUTPUT.PUT_LINE('Please contact Avengers')
+        DBMS_OUTPUT.PUT_LINE('Please contact Avengers');
     END IF;
     DBMS_OUTPUT.PUT_LINE('Thanks for contacting us');
 end;
